@@ -20,86 +20,199 @@ namespace Calculator_Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        double FirstNumber = 0;
+        double secondNumber = 0;
+        double result = 0;
+        string setMathChoice = "";
         public MainWindow()
         {
             InitializeComponent();
 
         }
-        private void Button_click_1(object sender, RoutedEventArgs e)
+
+        #region number inputs
+        private void button_Copy2_Click(object sender, RoutedEventArgs e)
         {
-            Button b = (Button)sender;
-            textBox1.Text += b.Content.ToString();
+            //1
+            if(textBox1.Text=="0")
+            {
+                textBox1.Text = "";
+            }
+            textBox1.Text += "1";
         }
-        private void Result_click(object sender, RoutedEventArgs e)
+
+        private void button_Copy1_Click(object sender, RoutedEventArgs e)
         {
-            try
+            //2
+            if (textBox1.Text == "0")
             {
-                Result();
+                textBox1.Text = "";
             }
-            catch (Exception exc)
-            {
-                textBox1.Text = "Error!";
-            }
+            textBox1.Text += "2";
         }
-        private void Result()
+
+        private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
-            string op;
-            int iOp = 0;
-            if(textBox1.Text.Contains("+"))
+            //3
+            if (textBox1.Text == "0")
             {
-                iOp = textBox1.Text.IndexOf("+");
+                textBox1.Text = "";
             }
-            else if(textBox1.Text.Contains("-"))
-            {
-                iOp = textBox1.Text.IndexOf("-");
-            }
-            else if(textBox1.Text.Contains("*"))
-            {
-                iOp = textBox1.Text.IndexOf("*");
-            }
-            else if(textBox1.Text.Contains("/"))
-            {
-                iOp = textBox1.Text.IndexOf("/");
-            }
-            else
-            {
-                //error
-            }
-            op = textBox1.Text.Substring(iOp, 1);
-            double op1 = Convert.ToDouble(textBox1.Text.Substring(0, iOp));
-            double op2 = Convert.ToDouble(textBox1.Text.Substring(iOp + 1, textBox1.Text.Length-iOp-1));
-            if(op=="+")
-            {
-                textBox1.Text += "=" + (op1 + op2);
-            }
-            else if(op=="-")
-            {
-                textBox1.Text += "=" + (op1 - op2);
-            }
-            else if(op=="*")
-            {
-                textBox1.Text += "=" + (op1 * op2);
-            }
-            else
-            {
-                textBox1.Text += "=" + (op1 / op2);
-            }
+            textBox1.Text += "3";
         }
-        private void Off_Click_1(object sender, RoutedEventArgs e)
+
+        private void button_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            //4
+            if (textBox1.Text == "0")
+            {
+                textBox1.Text = "";
+            }
+            textBox1.Text += "4";
         }
-        private void Del_Click(object sender, RoutedEventArgs e)
+
+        private void button_Copy3_Click(object sender, RoutedEventArgs e)
         {
+            //5
+            if (textBox1.Text == "0")
+            {
+                textBox1.Text = "";
+            }
+            textBox1.Text += "5";
+        }
+        private void button_Copy5_Click(object sender, RoutedEventArgs e)
+        {
+            //6
+            if (textBox1.Text == "0")
+            {
+                textBox1.Text = "";
+            }
+            textBox1.Text += "6";
+        }
+
+        private void button_Copy7_Click(object sender, RoutedEventArgs e)
+        {
+            //7
+            if (textBox1.Text == "0")
+            {
+                textBox1.Text = "";
+            }
+            textBox1.Text += "7";
+        }
+
+        private void button_Copy6_Click(object sender, RoutedEventArgs e)
+        {
+            //8
+            if (textBox1.Text == "0")
+            {
+                textBox1.Text = "";
+            }
+            textBox1.Text += "8";
+        }
+
+        private void button_Copy4_Click(object sender, RoutedEventArgs e)
+        {
+            //9
+            if (textBox1.Text == "0")
+            {
+                textBox1.Text = "";
+            }
+            textBox1.Text += "9";
+        }
+
+        private void button_Copy8_Click(object sender, RoutedEventArgs e)
+        {
+            //0
+            if (textBox1.Text == "0")
+            {
+                textBox1.Text = "";
+            }
+            textBox1.Text += "0";
+        }
+        #endregion
+
+        #region Extra functions
+        private void button_Copy15_Click(object sender, RoutedEventArgs e)
+        {
+            //Delete
             textBox1.Text = "";
         }
-        private void R_Click(object sender, RoutedEventArgs e)
+
+        private void button_Copy16_Click(object sender, RoutedEventArgs e)
         {
-            if(textBox1.Text.Length>0)
+            //clear current input
+            if(textBox1.Text.Length>1)
             {
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
             }
         }
+
+        private void button_Copy14_Click(object sender, RoutedEventArgs e)
+        {
+            //Off button
+            Application.Current.Shutdown();
+        }
+        #endregion
+        
+        #region Mathematical Functions
+        private void button_Copy11_Click(object sender, RoutedEventArgs e)
+        {
+            //plus
+            FirstNumber = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "";
+            setMathChoice = "+";
+        }
+
+        private void button_Copy10_Click(object sender, RoutedEventArgs e)
+        {
+            //Minus
+            FirstNumber = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "";
+            setMathChoice = "-";
+        }
+
+        private void button_Copy9_Click(object sender, RoutedEventArgs e)
+        {
+            //Multiply
+            FirstNumber = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "";
+            setMathChoice = "*";
+        }
+
+        private void button_Copy13_Click(object sender, RoutedEventArgs e)
+        {
+            //Division
+            FirstNumber = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "";
+            setMathChoice = "/";
+        }
+
+        private void button_Copy12_Click(object sender, RoutedEventArgs e)
+        {
+            //Equals
+            secondNumber = Convert.ToDouble(textBox1.Text);
+            if(setMathChoice=="+")
+            {
+                result = FirstNumber + secondNumber;
+                textBox1.Text = FirstNumber.ToString() + "+" + secondNumber.ToString() + "=" + result.ToString();
+            }
+            else if(setMathChoice=="-")
+            {
+                result = FirstNumber - secondNumber;
+                textBox1.Text = FirstNumber.ToString() + "-" + secondNumber.ToString() + "=" + result.ToString();
+            }
+            else if(setMathChoice=="*")
+            {
+                result = FirstNumber * secondNumber;
+                textBox1.Text = FirstNumber.ToString() + "*" + secondNumber.ToString() + "=" + result.ToString();
+            }
+            else if(setMathChoice=="/")
+            {
+                result = FirstNumber / secondNumber;
+                textBox1.Text = FirstNumber.ToString() + "/" + secondNumber.ToString() + "=" + result.ToString();
+            }
+        }
+        #endregion
     }
 }
     
