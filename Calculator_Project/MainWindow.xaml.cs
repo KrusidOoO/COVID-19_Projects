@@ -22,6 +22,9 @@ namespace Calculator_Project
     {
         double FirstNumber = 0;
         double secondNumber = 0;
+        int counter = 0;
+        double[] input =new double[] { };
+        List<double> input2 = new List<double> { };
         double result = 0;
         string setMathChoice = "";
         public MainWindow()
@@ -33,7 +36,7 @@ namespace Calculator_Project
         #region number inputs
         private void button_Copy2_Click(object sender, RoutedEventArgs e)
         {
-            //1
+            //1 inputs x in the textbox
             if(textBox1.Text=="0")
             {
                 textBox1.Text = "";
@@ -43,7 +46,7 @@ namespace Calculator_Project
 
         private void button_Copy1_Click(object sender, RoutedEventArgs e)
         {
-            //2
+            //2 inputs x in the textbox
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "";
@@ -53,7 +56,7 @@ namespace Calculator_Project
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
-            //3
+            //3 inputs x in the textbox
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "";
@@ -63,7 +66,7 @@ namespace Calculator_Project
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            //4
+            //4 inputs x in the textbox
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "";
@@ -73,7 +76,7 @@ namespace Calculator_Project
 
         private void button_Copy3_Click(object sender, RoutedEventArgs e)
         {
-            //5
+            //5 inputs x in the textbox
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "";
@@ -82,7 +85,7 @@ namespace Calculator_Project
         }
         private void button_Copy5_Click(object sender, RoutedEventArgs e)
         {
-            //6
+            //6 inputs x in the textbox
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "";
@@ -92,7 +95,7 @@ namespace Calculator_Project
 
         private void button_Copy7_Click(object sender, RoutedEventArgs e)
         {
-            //7
+            //7 inputs x in the textbox
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "";
@@ -102,7 +105,7 @@ namespace Calculator_Project
 
         private void button_Copy6_Click(object sender, RoutedEventArgs e)
         {
-            //8
+            //8 inputs x in the textbox
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "";
@@ -112,7 +115,7 @@ namespace Calculator_Project
 
         private void button_Copy4_Click(object sender, RoutedEventArgs e)
         {
-            //9
+            //9 inputs x in the textbox
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "";
@@ -122,7 +125,7 @@ namespace Calculator_Project
 
         private void button_Copy8_Click(object sender, RoutedEventArgs e)
         {
-            //0
+            //0 inputs x in the textbox
             if (textBox1.Text == "0")
             {
                 textBox1.Text = "";
@@ -134,13 +137,13 @@ namespace Calculator_Project
         #region Extra functions
         private void button_Copy15_Click(object sender, RoutedEventArgs e)
         {
-            //Delete
+            //Delete - Deletes the whole "historic" of numbers
             textBox1.Text = "";
         }
 
         private void button_Copy16_Click(object sender, RoutedEventArgs e)
         {
-            //clear current input
+            //clear 1 character of current input
             if(textBox1.Text.Length>1)
             {
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
@@ -149,7 +152,7 @@ namespace Calculator_Project
 
         private void button_Copy14_Click(object sender, RoutedEventArgs e)
         {
-            //Off button
+            //Off button - quits the application
             Application.Current.Shutdown();
         }
         #endregion
@@ -157,15 +160,16 @@ namespace Calculator_Project
         #region Mathematical Functions
         private void button_Copy11_Click(object sender, RoutedEventArgs e)
         {
-            //plus
+            //plus - adds two numbers together
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
             setMathChoice = "+";
+            counter++;
         }
 
         private void button_Copy10_Click(object sender, RoutedEventArgs e)
         {
-            //Minus
+            //Minus - subtacts two numbers from eachother
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
             setMathChoice = "-";
@@ -173,7 +177,7 @@ namespace Calculator_Project
 
         private void button_Copy9_Click(object sender, RoutedEventArgs e)
         {
-            //Multiply
+            //Multiply - multiplies two numbers
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
             setMathChoice = "*";
@@ -181,7 +185,7 @@ namespace Calculator_Project
 
         private void button_Copy13_Click(object sender, RoutedEventArgs e)
         {
-            //Division
+            //Division - divides two numbers
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
             setMathChoice = "/";
@@ -189,7 +193,7 @@ namespace Calculator_Project
 
         private void button_Copy12_Click(object sender, RoutedEventArgs e)
         {
-            //Equals
+            //Equals - gives the result of given input
             secondNumber = Convert.ToDouble(textBox1.Text);
             if(setMathChoice=="+")
             {
