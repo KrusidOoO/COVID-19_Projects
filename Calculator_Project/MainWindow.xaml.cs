@@ -20,11 +20,9 @@ namespace Calculator_Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        //
         double FirstNumber = 0;
-        double secondNumber = 0;
-        int counter = 0;
-        double[] input =new double[] { };
-        List<double> input2 = new List<double> { };
+        double secondNumber;
         double result = 0;
         string setMathChoice = "";
         public MainWindow()
@@ -42,6 +40,11 @@ namespace Calculator_Project
                 textBox1.Text = "";
             }
             textBox1.Text += "1";
+            if (textBox2.Text == "0")
+            {
+                textBox2.Text = "";
+            }
+            textBox2.Text += "1";
         }
 
         private void button_Copy1_Click(object sender, RoutedEventArgs e)
@@ -52,6 +55,11 @@ namespace Calculator_Project
                 textBox1.Text = "";
             }
             textBox1.Text += "2";
+            if (textBox2.Text == "0")
+            {
+                textBox2.Text = "";
+            }
+            textBox2.Text += "2";
         }
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
@@ -62,6 +70,11 @@ namespace Calculator_Project
                 textBox1.Text = "";
             }
             textBox1.Text += "3";
+            if (textBox2.Text == "0")
+            {
+                textBox2.Text = "";
+            }
+            textBox2.Text += "3";
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
@@ -72,6 +85,11 @@ namespace Calculator_Project
                 textBox1.Text = "";
             }
             textBox1.Text += "4";
+            if (textBox2.Text == "0")
+            {
+                textBox2.Text = "";
+            }
+            textBox2.Text += "4";
         }
 
         private void button_Copy3_Click(object sender, RoutedEventArgs e)
@@ -82,6 +100,11 @@ namespace Calculator_Project
                 textBox1.Text = "";
             }
             textBox1.Text += "5";
+            if (textBox2.Text == "0")
+            {
+                textBox2.Text = "";
+            }
+            textBox2.Text += "5";
         }
         private void button_Copy5_Click(object sender, RoutedEventArgs e)
         {
@@ -91,6 +114,11 @@ namespace Calculator_Project
                 textBox1.Text = "";
             }
             textBox1.Text += "6";
+            if (textBox2.Text == "0")
+            {
+                textBox2.Text = "";
+            }
+            textBox2.Text += "6";
         }
 
         private void button_Copy7_Click(object sender, RoutedEventArgs e)
@@ -101,6 +129,11 @@ namespace Calculator_Project
                 textBox1.Text = "";
             }
             textBox1.Text += "7";
+            if (textBox2.Text == "0")
+            {
+                textBox2.Text = "";
+            }
+            textBox2.Text += "7";
         }
 
         private void button_Copy6_Click(object sender, RoutedEventArgs e)
@@ -111,6 +144,11 @@ namespace Calculator_Project
                 textBox1.Text = "";
             }
             textBox1.Text += "8";
+            if (textBox2.Text == "0")
+            {
+                textBox2.Text = "";
+            }
+            textBox2.Text += "8";
         }
 
         private void button_Copy4_Click(object sender, RoutedEventArgs e)
@@ -121,6 +159,11 @@ namespace Calculator_Project
                 textBox1.Text = "";
             }
             textBox1.Text += "9";
+            if (textBox2.Text == "0")
+            {
+                textBox2.Text = "";
+            }
+            textBox2.Text += "9";
         }
 
         private void button_Copy8_Click(object sender, RoutedEventArgs e)
@@ -131,6 +174,11 @@ namespace Calculator_Project
                 textBox1.Text = "";
             }
             textBox1.Text += "0";
+            if (textBox2.Text == "0")
+            {
+                textBox2.Text = "";
+            }
+            textBox2.Text += "0";
         }
         #endregion
 
@@ -148,6 +196,10 @@ namespace Calculator_Project
             {
                 textBox1.Text = textBox1.Text.Substring(0, textBox1.Text.Length - 1);
             }
+            if (textBox2.Text.Length > 1)
+            {
+                textBox2.Text = textBox2.Text.Substring(0, textBox2.Text.Length - 1);
+            }
         }
 
         private void button_Copy14_Click(object sender, RoutedEventArgs e)
@@ -164,7 +216,7 @@ namespace Calculator_Project
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
             setMathChoice = "+";
-            counter++;
+            textBox2.Text += "+";
         }
 
         private void button_Copy10_Click(object sender, RoutedEventArgs e)
@@ -173,6 +225,11 @@ namespace Calculator_Project
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
             setMathChoice = "-";
+            if(textBox1.Text=="")
+            {
+                textBox1.Text += "-";
+            }
+            textBox2.Text += "-";
         }
 
         private void button_Copy9_Click(object sender, RoutedEventArgs e)
@@ -181,14 +238,20 @@ namespace Calculator_Project
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
             setMathChoice = "*";
+            textBox2.Text += "*";
         }
 
         private void button_Copy13_Click(object sender, RoutedEventArgs e)
         {
             //Division - divides two numbers
+            if(secondNumber==0)
+            {
+                textBox1.Text="Cannot divide by zero";
+            }
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
             setMathChoice = "/";
+            textBox2.Text += "/";
         }
 
         private void button_Copy12_Click(object sender, RoutedEventArgs e)
@@ -198,22 +261,22 @@ namespace Calculator_Project
             if(setMathChoice=="+")
             {
                 result = FirstNumber + secondNumber;
-                textBox1.Text = FirstNumber.ToString() + "+" + secondNumber.ToString() + "=" + result.ToString();
+                textBox1.Text = result.ToString();
             }
             else if(setMathChoice=="-")
             {
                 result = FirstNumber - secondNumber;
-                textBox1.Text = FirstNumber.ToString() + "-" + secondNumber.ToString() + "=" + result.ToString();
+                textBox1.Text = result.ToString();
             }
             else if(setMathChoice=="*")
             {
                 result = FirstNumber * secondNumber;
-                textBox1.Text = FirstNumber.ToString() + "*" + secondNumber.ToString() + "=" + result.ToString();
+                textBox1.Text = result.ToString();
             }
             else if(setMathChoice=="/")
             {
                 result = FirstNumber / secondNumber;
-                textBox1.Text = FirstNumber.ToString() + "/" + secondNumber.ToString() + "=" + result.ToString();
+                textBox1.Text = result.ToString();
             }
         }
         #endregion
