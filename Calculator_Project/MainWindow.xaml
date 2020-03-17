@@ -31,7 +31,8 @@
         <Button x:Name="button_Copy14" Content="OFF" HorizontalAlignment="Left" Margin="325,158,0,0" VerticalAlignment="Top" Height="50" Width="50" Grid.Row="1" Click="button_Copy14_Click"/>
         <Button x:Name="button_Copy15" Content="Del" HorizontalAlignment="Left" Margin="257,158,0,0" VerticalAlignment="Top" Height="50" Width="50" Grid.Row="1" Click="button_Copy15_Click"/>
         <Button x:Name="button_Copy16" Content="C" HorizontalAlignment="Left" Margin="257,218,0,0" VerticalAlignment="Top" Height="50" Width="50" Grid.Row="1" Click="button_Copy16_Click"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="50" Margin="10,67,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" FontSize="24" TextAlignment="Right" Text="0"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="75" Margin="10,67,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" FontSize="24" TextAlignment="Right" Text="0"/>
+        <Button x:Name="button_Copy17" Content="+/-" HorizontalAlignment="Left" Margin="152,414,0,0" VerticalAlignment="Top" Height="50" Width="50" Grid.Row="1" Click="button_Copy17_Click"/>
 
     </Grid>
 </Window>

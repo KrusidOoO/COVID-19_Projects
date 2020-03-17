@@ -24,7 +24,7 @@ namespace Calculator_Project
         double FirstNumber = 0;
         double secondNumber;
         double result = 0;
-        string setMathChoice = "";
+        string[] setMathChoice = new string[] {"+","-","*","/" };
         public MainWindow()
         {
             InitializeComponent();
@@ -187,6 +187,7 @@ namespace Calculator_Project
         {
             //Delete - Deletes the whole "historic" of numbers
             textBox1.Text = "";
+            textBox2.Text = "";
         }
 
         private void button_Copy16_Click(object sender, RoutedEventArgs e)
@@ -215,7 +216,7 @@ namespace Calculator_Project
             //plus - adds two numbers together
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
-            setMathChoice = "+";
+            setMathChoice.ElementAt(0);
             textBox2.Text += "+";
         }
 
@@ -224,7 +225,7 @@ namespace Calculator_Project
             //Minus - subtacts two numbers from eachother
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
-            setMathChoice = "-";
+            setMathChoice.ElementAt(1);
             if(textBox1.Text=="")
             {
                 textBox1.Text += "-";
@@ -237,7 +238,7 @@ namespace Calculator_Project
             //Multiply - multiplies two numbers
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
-            setMathChoice = "*";
+            setMathChoice.ElementAt(2);
             textBox2.Text += "*";
         }
 
@@ -250,36 +251,60 @@ namespace Calculator_Project
             }
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
-            setMathChoice = "/";
+            setMathChoice.ElementAt(3);
             textBox2.Text += "/";
         }
-
+        private void button_Copy17_Click(object sender, RoutedEventArgs e)
+        {
+            bool positive;
+            for (int i = 0; i < 1000000000; i++)
+            {
+                if (i%2==0)
+                {
+                    positive = true;
+                }
+                else
+                {
+                    positive = false;
+                }
+                if(positive)
+                {
+                    return;
+                }
+                else if(!positive)
+                {
+                    string temporaryInput=textBox1.Text;
+                    textBox1.Text="-"+temporaryInput;
+                }
+            }
+            //Changes the number to be positive or negative
+        }
         private void button_Copy12_Click(object sender, RoutedEventArgs e)
         {
             //Equals - gives the result of given input
             secondNumber = Convert.ToDouble(textBox1.Text);
-            if(setMathChoice=="+")
+            if(setMathChoice.ElementAt(0)=="+")
             {
                 result = FirstNumber + secondNumber;
                 textBox1.Text = result.ToString();
             }
-            else if(setMathChoice=="-")
+            else if(setMathChoice.ElementAt(1)=="-")
             {
                 result = FirstNumber - secondNumber;
                 textBox1.Text = result.ToString();
             }
-            else if(setMathChoice=="*")
+            else if(setMathChoice.ElementAt(2)=="*")
             {
                 result = FirstNumber * secondNumber;
                 textBox1.Text = result.ToString();
             }
-            else if(setMathChoice=="/")
+            else if(setMathChoice.ElementAt(3)=="/")
             {
                 result = FirstNumber / secondNumber;
                 textBox1.Text = result.ToString();
             }
         }
         #endregion
+
     }
 }
-    
