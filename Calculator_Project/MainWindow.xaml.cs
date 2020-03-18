@@ -216,9 +216,12 @@ namespace Calculator_Project
         private void ButtonPlus_Click(object sender, RoutedEventArgs e)
         {
             //plus - adds two numbers together
-            if (newFirst > 0)
+            if (FirstNumber==result)
             {
-                result = result + FirstNumber;
+                secondNumber = Convert.ToDouble(textBox1.Text);
+                textBox1.Text = "";
+                setMathChoice.ElementAt(0);
+                textBox2.Text = "+";
             }
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
@@ -264,7 +267,9 @@ namespace Calculator_Project
         private void ButtonEquals_Click(object sender, RoutedEventArgs e)
         {
             //Equals - gives the result of given input
+            if(FirstNumber!=result)
             secondNumber = Convert.ToDouble(textBox1.Text);
+            else if(FirstNumber==result)
             if (setMathChoice.ElementAt(0) == "+")
             {
                 result = FirstNumber + secondNumber;

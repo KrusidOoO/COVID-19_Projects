@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GuessingGame_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="MainWindow" Height="450" Width="400">
+    <Grid Height="434">
+        <TextBox x:Name="Input_Text" HorizontalAlignment="Left" Margin="79,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" FontSize="18"/>
+        <Label x:Name="GeneratedNumber_Label" Content="" HorizontalAlignment="Left" Margin="265,34,0,0" VerticalAlignment="Top" Width="50" Height="35" FontSize="18"/>
+        <Label x:Name="label1" Content="Input" HorizontalAlignment="Left" Margin="106,71,0,0" VerticalAlignment="Top" FontSize="8"/>
+        <Label x:Name="Output_Label" Content="Output" HorizontalAlignment="Left" Margin="272,74,0,0" VerticalAlignment="Top" FontSize="8"/>
+        <Button x:Name="Generate_Button" Content="Generate" HorizontalAlignment="Left" Margin="165,111,0,0" VerticalAlignment="Top" Height="50" Width="76" Click="Generate_Button_Click"/>
+        <Label x:Name="Win_Label" Content="You Win" HorizontalAlignment="Left" Margin="79,114,0,0" VerticalAlignment="Top" Visibility="Hidden" FontSize="20"/>
+        <Label x:Name="Lose_Label" Content="You Lose" HorizontalAlignment="Left" Margin="246,118,0,0" VerticalAlignment="Top" Visibility="Hidden" FontSize="20"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="10,171,0,0" Text="Firstly. Enter your guess in the input textbox. Then press the 'Generate' button to see if you were correct" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Height="150"/>
+        <Label x:Name="Hint_Label" Content="" HorizontalAlignment="Left" Height="39" Margin="177,34,0,0" VerticalAlignment="Top" Width="52"/>
     </Grid>
 </Window>
