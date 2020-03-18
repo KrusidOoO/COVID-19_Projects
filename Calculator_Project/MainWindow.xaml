@@ -25,11 +25,11 @@
         </Grid.ColumnDefinitions>
         <!--Text Fields-->
         <TextBox x:Name="textBox1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Width="493" Height="89"  Text="0" FontSize="36" TextAlignment="Right" Grid.ColumnSpan="4"/>
-        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="89" TextWrapping="Wrap" VerticalAlignment="Center" Width="368" FontSize="24" TextAlignment="Right" Text="0" Grid.Row="1" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="89" TextWrapping="Wrap" VerticalAlignment="Center" Width="370" FontSize="24" TextAlignment="Right" Text="0" Grid.Row="1" Grid.ColumnSpan="3" Margin="-1,0,0,0"/>
         <!--Number Buttons-->
         <Button x:Name="Button1" Content="1" Click="Button1_Click" Margin="0,1,0,88" Grid.RowSpan="2" Grid.Row="3"/>
         <Button x:Name="Button2" Content="2" Click="Button2_Click" Grid.ColumnSpan="2" Margin="123,1,1,88" Grid.RowSpan="2" Grid.Row="3"/>
-        <Button x:Name="Button3" Content="3" Click="Button3_Click" Grid.ColumnSpan="2" Grid.Column="1" Margin="123,1,1,88" Grid.RowSpan="2" Grid.Row="3"/>
+        <Button x:Name="Button3" Content="3" Click="Button3_Click" Grid.ColumnSpan="2" Grid.Column="1" Margin="122,1,2,88" Grid.RowSpan="2" Grid.Row="3"/>
         <Button x:Name="Button4" Content="4" Click="Button4_Click" Margin="0,0,0,88" Grid.RowSpan="2" Grid.Row="4"/>
         <Button x:Name="Button5" Content="5" Click="Button5_Click" Grid.ColumnSpan="2" Margin="123,1,1,87" Grid.RowSpan="2" Grid.Row="4"/>
         <Button x:Name="Button6" Content="6" Click="Button6_Click" Grid.ColumnSpan="2" Grid.Column="1" Margin="123,1,1,88" Grid.RowSpan="2" Grid.Row="4"/>
@@ -38,8 +38,8 @@
         <Button x:Name="Button9" Content="9" Click="Button9_Click" Grid.ColumnSpan="2" Grid.Column="2" Margin="0,88,123,87" Grid.RowSpan="3" Grid.Row="4"/>
         <Button x:Name="Button00" Content="0" Click="Button0_Click" Grid.ColumnSpan="3" Margin="123,2,123,-2" Grid.Row="6"/>
         <Button x:Name="ButtonMultiply" Content="*" Click="ButtonMultiply_Click" Grid.ColumnSpan="2" Grid.Column="2" Margin="123,0,1,88" Grid.RowSpan="2" Grid.Row="4"/>
-        <Button x:Name="ButtonMinus" Content="-" Click="ButtonMinus_Click" Grid.ColumnSpan="3" Grid.Column="2" Margin="123,89,154,88" Grid.RowSpan="3" Grid.Row="2"/>
-        <Button x:Name="ButtonPlus" Content="+" Click="ButtonPlus_Click" Grid.ColumnSpan="2" Grid.Column="2" Margin="123,1,1,88" Grid.RowSpan="2" Grid.Row="2"/>
+        <Button x:Name="ButtonMinus" Content="-" Click="ButtonMinus_Click" Grid.ColumnSpan="2" Grid.Column="2" Margin="122,89,1,89" Grid.RowSpan="3" Grid.Row="2"/>
+        <Button x:Name="ButtonPlus" Content="+" Click="ButtonPlus_Click" Grid.ColumnSpan="2" Grid.Column="2" Margin="123,88,1,0" Grid.RowSpan="2" Grid.Row="1"/>
         <Button x:Name="ButtonEquals" Content="=" Click="ButtonEquals_Click" Grid.ColumnSpan="2" Grid.Column="2" Margin="122,2,1,-1" Grid.Row="6"/>
         <Button x:Name="ButtonDivide" Content="/" Click="ButtonDivide_Click" Grid.Column="2" Margin="123,0,1,0" Grid.Row="5" Grid.ColumnSpan="2" />
         <Button x:Name="ButtonOFF" Content="OFF" Click="ButtonOFF_Click" Grid.ColumnSpan="2" Grid.Column="2" Margin="123,0,1,88" Grid.RowSpan="2" Grid.Row="1"/>
