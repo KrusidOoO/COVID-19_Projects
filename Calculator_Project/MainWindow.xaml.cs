@@ -18,6 +18,15 @@ namespace Calculator_Project
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
+    ///<summary>
+    ///To do list.
+    ///1. Fix code
+    ///2. Make sure code works
+    ///3. Give up on everything cause code doesn't work
+    ///4. Try again and code somehow works
+    ///5. repeat all of the above
+    /// </summary>
     public partial class MainWindow : Window
     {
         //
