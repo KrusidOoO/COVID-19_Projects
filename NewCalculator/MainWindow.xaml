@@ -50,7 +50,7 @@
         </Button>
         <!--1-->
         <Button x:Name="Num1" Grid.Row="4" 
-                Grid.Column="0" Click="Num1_Click">1
+                Grid.Column="0" Click="Num1_Click" Grid.ColumnSpan="1">1
         </Button>
         <!--2-->
         <Button x:Name="Num2" Grid.Row="4" 
@@ -68,42 +68,42 @@
         <!-- Maffs Buttons -->
         <!--Adding-->
         <Button x:Name="NumPlus" Grid.Row="1" 
-                Grid.Column="3">+
+                Grid.Column="3" Click="NumPlus_Click">+
         </Button>
         <!--Subtraction-->
         <Button x:Name="NumMinus" Grid.Row="2" 
-                Grid.Column="3">-
+                Grid.Column="3" Click="NumMinus_Click">-
         </Button>
         <!--Division-->
         <Button x:Name="NumDivide" Grid.Row="3" 
-                Grid.Column="3">/
+                Grid.Column="3" Click="NumDivide_Click">/
         </Button>
         <!--Multiplying-->
         <Button x:Name="NumMultiply" Grid.Row="4" 
-                Grid.Column="3">*
+                Grid.Column="3" Click="NumMultiply_Click">*
         </Button>
         <!--Equals-->
         <Button x:Name="NumEquals" Grid.Row="5" 
-                Grid.Column="3">=
+                Grid.Column="3" Click="NumEquals_Click">=
         </Button>
 
         <!-- Clear Buttons -->
         <!--Clear Entry-->
         <Button x:Name="NumCE" Grid.Row="1" 
-                Grid.Column="0">CE
+                Grid.Column="0" Click="NumCE_Click">CE
         </Button>
         <!--Clear All-->
         <Button x:Name="NumC" Grid.Row="1" 
-                Grid.Column="1">C
+                Grid.Column="1" Click="NumC_Click">C
         </Button>
         <!--Clear-->
         <Button x:Name="NumBackSpace" Grid.Column="2" 
-                Content="&lt;=" Grid.Row="1"/>
+                Content="&lt;=" Grid.Row="1" Click="NumBackSpace_Click"/>
 
         <!-- Positive & negative button -->
         <!--Button-->
         <Button x:Name="NumPosNeg" Grid.Row="5" 
-                Grid.Column="0">+/-
+                Grid.Column="0" Click="NumPosNeg_Click">+/-
         </Button>
 
         <!-- Display field -->
