@@ -67,7 +67,7 @@ namespace NewCalculator
 
         }
         #endregion
-
+        
         #region Functions
 
         #endregion

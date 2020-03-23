@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NewCalculator"
         mc:Ignorable="d"
-        Title="Calculator" Height="450" Width="500">
+        Title="Calculator" Height="500" Width="350">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -50,7 +50,7 @@
         </Button>
         <!--1-->
         <Button x:Name="Num1" Grid.Row="4" 
-                Grid.Column="0">1
+                Grid.Column="0" Click="Num1_Click">1
         </Button>
         <!--2-->
         <Button x:Name="Num2" Grid.Row="4" 
@@ -98,8 +98,7 @@
         </Button>
         <!--Clear-->
         <Button x:Name="NumBackSpace" Grid.Column="2" 
-                Content="&lt;=" Margin="0,72,0,72" Grid.RowSpan="3">
-        </Button>
+                Content="&lt;=" Grid.Row="1"/>
 
         <!-- Positive & negative button -->
         <!--Button-->
@@ -116,5 +115,3 @@
         </TextBox>
     </Grid>
 </Window>
-
-    
