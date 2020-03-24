@@ -35,12 +35,12 @@ namespace NewCalculator
             //turns into 501
             if (operation == "")
             {
-                number1 = (number1 * 10) + 1;
+                number1 += 1;
                 TxtDisplay.Text = number1.ToString();
             }
             else
             {
-                number2 = (number2 * 10) + 1;
+                number2 += 1;
                 TxtDisplay.Text = number2.ToString();
             }
         }
@@ -48,12 +48,12 @@ namespace NewCalculator
         {
             if (operation == "")
             {
-                number1 = (number1 * 10) + 2;
+                number1 += 2;
                 TxtDisplay.Text = number1.ToString();
             }
             else
             {
-                number2 = (number2 * 10) + 2;
+                number2 += 2;
                 TxtDisplay.Text = number2.ToString();
             }
         }
@@ -61,12 +61,12 @@ namespace NewCalculator
         {
             if (operation == "")
             {
-                number1 = (number1 * 10) + 3;
+                number1 += 3;
                 TxtDisplay.Text = number1.ToString();
             }
             else
             {
-                number2 = (number2 * 10) + 3;
+                number2 += 3;
                 TxtDisplay.Text = number2.ToString();
             }
         }
@@ -74,12 +74,12 @@ namespace NewCalculator
         {
             if (operation == "")
             {
-                number1 = (number1 * 10) + 4;
+                number1 += 4;
                 TxtDisplay.Text = number1.ToString();
             }
             else
             {
-                number2 = (number2 * 10) + 4;
+                number2 += 4;
                 TxtDisplay.Text = number2.ToString();
             }
         }
@@ -87,12 +87,12 @@ namespace NewCalculator
         {
             if (operation == "")
             {
-                number1 = (number1 * 10) + 5;
+                number1 += 5;
                 TxtDisplay.Text = number1.ToString();
             }
             else
             {
-                number2 = (number2 * 10) + 5;
+                number2 += 5;
                 TxtDisplay.Text = number2.ToString();
             }
         }
@@ -100,12 +100,12 @@ namespace NewCalculator
         {
             if (operation == "")
             {
-                number1 = (number1 * 10) + 6;
+                number1 += 6;
                 TxtDisplay.Text = number1.ToString();
             }
             else
             {
-                number2 = (number2 * 10) + 6;
+                number2 += 6;
                 TxtDisplay.Text = number2.ToString();
             }
         }
@@ -113,12 +113,12 @@ namespace NewCalculator
         {
             if (operation == "")
             {
-                number1 = (number1 * 10) + 7;
+                number1 += 7;
                 TxtDisplay.Text = number1.ToString();
             }
             else
             {
-                number2 = (number2 * 10) + 7;
+                number2 += 7;
                 TxtDisplay.Text = number2.ToString();
             }
         }
@@ -126,12 +126,12 @@ namespace NewCalculator
         {
             if (operation == "")
             {
-                number1 = (number1 * 10) + 8;
+                number1 += 8;
                 TxtDisplay.Text = number1.ToString();
             }
             else
             {
-                number2 = (number2 * 10) + 8;
+                number2 += 8;
                 TxtDisplay.Text = number2.ToString();
             }
         }
@@ -139,12 +139,12 @@ namespace NewCalculator
         {
             if (operation == "")
             {
-                number1 = (number1 * 10) + 9;
+                number1 += 9;
                 TxtDisplay.Text = number1.ToString();
             }
             else
             {
-                number2 = (number2 * 10) + 9;
+                number2 += 9;
                 TxtDisplay.Text = number2.ToString();
             }
         }
@@ -152,12 +152,12 @@ namespace NewCalculator
         {
             if (operation == "")
             {
-                number1 = (number1 * 10);
+                number1 += 0;
                 TxtDisplay.Text = number1.ToString();
             }
             else
             {
-                number2 = (number2 * 10);
+                number2 += 0;
                 TxtDisplay.Text = number2.ToString();
             }
         }
