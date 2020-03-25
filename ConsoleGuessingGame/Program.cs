@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace ConsoleGuessingGame
 {
@@ -7,20 +10,23 @@ namespace ConsoleGuessingGame
         static void Main(string[] args)
         {
             Console.WriteLine("Now it is time for a guessing game, guess a number between 0 and 10");
+            List<int> StoredInputs = new List<int> { };
             int k = 1;
             Random rnd = new Random();
             int o = Convert.ToInt32(rnd.Next(0, 10));
             int l;
+            int latestInput = StoredInputs.Count();
             while (k <= 3)
             {
 
                 Console.WriteLine("Make your guess as to which number has been generated");
                 l = Convert.ToInt32(Console.ReadLine());
-                //if(l==l)
-                //{
-                //    Console.WriteLine("This guess is the same as your previous guess, pick a different number");
-                //}
-                if (l > o)
+                StoredInputs.Add(l);
+                if(l==StoredInputs.ElementAt(latestInput))
+                {
+                    Console.WriteLine("This guess is the same as your previous guess, pick a different number");
+                }
+                else if (l > o)
                 {
                     Console.WriteLine("Your guess is higher than the generated number, try again");
                     k++;
