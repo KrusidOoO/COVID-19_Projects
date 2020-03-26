@@ -15,7 +15,7 @@ namespace ConsoleGuessingGame
             Random rnd = new Random();
             int o = Convert.ToInt32(rnd.Next(0, 10));
             int l;
-            int latestInput = StoredInputs.Count();
+            int latestInput = StoredInputs.Count()-1;
             while (k <= 3)
             {
 
