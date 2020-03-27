@@ -31,10 +31,10 @@ namespace Calculator_Project
     {
         //
         double FirstNumber = 0;
-        double newFirst;
         double secondNumber;
         double result = 0;
         string[] setMathChoice = new string[] {"+","-","*","/" };
+        string getMathchoice;
         public MainWindow()
         {
             InitializeComponent();
@@ -225,13 +225,6 @@ namespace Calculator_Project
         private void ButtonPlus_Click(object sender, RoutedEventArgs e)
         {
             //plus - adds two numbers together
-            if (FirstNumber==result)
-            {
-                secondNumber = Convert.ToDouble(textBox1.Text);
-                textBox1.Text = "";
-                setMathChoice.ElementAt(0);
-                textBox2.Text = "+";
-            }
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
             setMathChoice.ElementAt(0);
@@ -243,7 +236,7 @@ namespace Calculator_Project
             //Minus - subtacts two numbers from eachother
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
-            setMathChoice.ElementAt(1);
+            getMathchoice = setMathChoice.ElementAt(1);
             if (textBox1.Text == "")
             {
                 textBox1.Text += "-";
@@ -256,7 +249,7 @@ namespace Calculator_Project
             //Multiply - multiplies two numbers
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
-            setMathChoice.ElementAt(2);
+            getMathchoice = setMathChoice.ElementAt(2);
             textBox2.Text += "*";
         }
 
@@ -269,33 +262,30 @@ namespace Calculator_Project
             }
             FirstNumber = Convert.ToDouble(textBox1.Text);
             textBox1.Text = "";
-            setMathChoice.ElementAt(3);
+            getMathchoice = setMathChoice.ElementAt(3);
             textBox2.Text += "/";
         }
 
         private void ButtonEquals_Click(object sender, RoutedEventArgs e)
         {
+            secondNumber = Convert.ToInt32(textBox1.Text);
             //Equals - gives the result of given input
-            if(FirstNumber!=result)
-            secondNumber = Convert.ToDouble(textBox1.Text);
-            else if(FirstNumber==result)
-            if (setMathChoice.ElementAt(0) == "+")
+            if (getMathchoice == "+")
             {
                 result = FirstNumber + secondNumber;
-                newFirst = result;
                 textBox1.Text = result.ToString();
             }
-            else if (setMathChoice.ElementAt(1) == "-")
+            else if (getMathchoice == "-")
             {
                 result = FirstNumber - secondNumber;
                 textBox1.Text = result.ToString();
             }
-            else if (setMathChoice.ElementAt(2) == "*")
+            else if (getMathchoice == "*")
             {
                 result = FirstNumber * secondNumber;
                 textBox1.Text = result.ToString();
             }
-            else if (setMathChoice.ElementAt(3) == "/")
+            else if (getMathchoice == "/")
             {
                 result = FirstNumber / secondNumber;
                 textBox1.Text = result.ToString();

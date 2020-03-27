@@ -22,7 +22,7 @@ namespace ConsoleGuessingGame
                 Console.WriteLine("Make your guess as to which number has been generated");
                 l = Convert.ToInt32(Console.ReadLine());
                 StoredInputs.Add(l);
-                if(l==StoredInputs.ElementAt(latestInput))
+                if(l==StoredInputs.ElementAt(latestInput)&&k!=1)
                 {
                     Console.WriteLine("This guess is the same as your previous guess, pick a different number");
                 }

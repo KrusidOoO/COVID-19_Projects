@@ -110,7 +110,7 @@
         <!--TextBox-->
         <TextBox x:Name="TxtDisplay" IsReadOnly="True" 
                  TextAlignment="Right" VerticalAlignment="Center" 
-                 FontSize="54" BorderThickness="0" Grid.Column="0" 
+                 FontSize="54" BorderThickness="0" Grid.Row="0"  Grid.Column="0" 
                  Grid.ColumnSpan="4" Height="72">0
         </TextBox>
     </Grid>
