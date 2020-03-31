@@ -48,6 +48,16 @@
             this.Price_Family3 = new System.Windows.Forms.CheckBox();
             this.Price_Family2 = new System.Windows.Forms.CheckBox();
             this.Price_Family1 = new System.Windows.Forms.CheckBox();
+            this.Basket_Label = new System.Windows.Forms.Label();
+            this.Basket_Content_Label = new System.Windows.Forms.Label();
+            this.Basket_Content_Label2 = new System.Windows.Forms.Label();
+            this.Basket_Content_Label3 = new System.Windows.Forms.Label();
+            this.Number_4 = new System.Windows.Forms.Label();
+            this.Pizza_Name4 = new System.Windows.Forms.Label();
+            this.Pizza_Description4 = new System.Windows.Forms.Label();
+            this.Price_Normal4 = new System.Windows.Forms.CheckBox();
+            this.Price_Family4 = new System.Windows.Forms.CheckBox();
+            this.Purchase4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Pizza_Name1
@@ -168,6 +178,7 @@
             this.Purchase1.TabIndex = 17;
             this.Purchase1.Text = "Køb";
             this.Purchase1.UseVisualStyleBackColor = true;
+            this.Purchase1.Click += new System.EventHandler(this.Purchase1_Click);
             // 
             // Purchase3
             // 
@@ -177,6 +188,7 @@
             this.Purchase3.TabIndex = 18;
             this.Purchase3.Text = "Køb";
             this.Purchase3.UseVisualStyleBackColor = true;
+            this.Purchase3.Click += new System.EventHandler(this.Purchase3_Click);
             // 
             // Purchase2
             // 
@@ -186,6 +198,7 @@
             this.Purchase2.TabIndex = 19;
             this.Purchase2.Text = "Køb";
             this.Purchase2.UseVisualStyleBackColor = true;
+            this.Purchase2.Click += new System.EventHandler(this.Purchase2_Click);
             // 
             // Price_Normal1
             // 
@@ -253,11 +266,120 @@
             this.Price_Family1.Text = "125 ,-";
             this.Price_Family1.UseVisualStyleBackColor = true;
             // 
+            // Basket_Label
+            // 
+            this.Basket_Label.AutoSize = true;
+            this.Basket_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Basket_Label.Location = new System.Drawing.Point(846, 77);
+            this.Basket_Label.Name = "Basket_Label";
+            this.Basket_Label.Size = new System.Drawing.Size(147, 26);
+            this.Basket_Label.TabIndex = 26;
+            this.Basket_Label.Text = "Indkøbskurv:";
+            // 
+            // Basket_Content_Label
+            // 
+            this.Basket_Content_Label.AutoSize = true;
+            this.Basket_Content_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Basket_Content_Label.Location = new System.Drawing.Point(889, 111);
+            this.Basket_Content_Label.Name = "Basket_Content_Label";
+            this.Basket_Content_Label.Size = new System.Drawing.Size(0, 20);
+            this.Basket_Content_Label.TabIndex = 27;
+            // 
+            // Basket_Content_Label2
+            // 
+            this.Basket_Content_Label2.AutoSize = true;
+            this.Basket_Content_Label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Basket_Content_Label2.Location = new System.Drawing.Point(889, 144);
+            this.Basket_Content_Label2.Name = "Basket_Content_Label2";
+            this.Basket_Content_Label2.Size = new System.Drawing.Size(0, 20);
+            this.Basket_Content_Label2.TabIndex = 28;
+            // 
+            // Basket_Content_Label3
+            // 
+            this.Basket_Content_Label3.AutoSize = true;
+            this.Basket_Content_Label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Basket_Content_Label3.Location = new System.Drawing.Point(889, 176);
+            this.Basket_Content_Label3.Name = "Basket_Content_Label3";
+            this.Basket_Content_Label3.Size = new System.Drawing.Size(0, 20);
+            this.Basket_Content_Label3.TabIndex = 29;
+            // 
+            // Number_4
+            // 
+            this.Number_4.AutoSize = true;
+            this.Number_4.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Number_4.Location = new System.Drawing.Point(172, 353);
+            this.Number_4.Name = "Number_4";
+            this.Number_4.Size = new System.Drawing.Size(26, 25);
+            this.Number_4.TabIndex = 30;
+            this.Number_4.Text = "4.";
+            // 
+            // Pizza_Name4
+            // 
+            this.Pizza_Name4.AutoSize = true;
+            this.Pizza_Name4.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pizza_Name4.Location = new System.Drawing.Point(223, 353);
+            this.Pizza_Name4.Name = "Pizza_Name4";
+            this.Pizza_Name4.Size = new System.Drawing.Size(142, 25);
+            this.Pizza_Name4.TabIndex = 31;
+            this.Pizza_Name4.Text = "Din egen pizza";
+            // 
+            // Pizza_Description4
+            // 
+            this.Pizza_Description4.AutoSize = true;
+            this.Pizza_Description4.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pizza_Description4.Location = new System.Drawing.Point(224, 378);
+            this.Pizza_Description4.Name = "Pizza_Description4";
+            this.Pizza_Description4.Size = new System.Drawing.Size(157, 57);
+            this.Pizza_Description4.TabIndex = 32;
+            this.Pizza_Description4.Text = "Med tomat, ost \r\nog op til \r\n5 valgfri ingredienser";
+            // 
+            // Price_Normal4
+            // 
+            this.Price_Normal4.AutoSize = true;
+            this.Price_Normal4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Price_Normal4.Location = new System.Drawing.Point(380, 359);
+            this.Price_Normal4.Name = "Price_Normal4";
+            this.Price_Normal4.Size = new System.Drawing.Size(56, 21);
+            this.Price_Normal4.TabIndex = 33;
+            this.Price_Normal4.Text = "75 ,-";
+            this.Price_Normal4.UseVisualStyleBackColor = true;
+            // 
+            // Price_Family4
+            // 
+            this.Price_Family4.AutoSize = true;
+            this.Price_Family4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Price_Family4.Location = new System.Drawing.Point(462, 357);
+            this.Price_Family4.Name = "Price_Family4";
+            this.Price_Family4.Size = new System.Drawing.Size(64, 21);
+            this.Price_Family4.TabIndex = 34;
+            this.Price_Family4.Text = "125 ,-";
+            this.Price_Family4.UseVisualStyleBackColor = true;
+            // 
+            // Purchase4
+            // 
+            this.Purchase4.Location = new System.Drawing.Point(556, 355);
+            this.Purchase4.Name = "Purchase4";
+            this.Purchase4.Size = new System.Drawing.Size(69, 25);
+            this.Purchase4.TabIndex = 35;
+            this.Purchase4.Text = "Køb";
+            this.Purchase4.UseVisualStyleBackColor = true;
+            this.Purchase4.Click += new System.EventHandler(this.Purchase4_Click);
+            // 
             // MenuKort
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 559);
+            this.Controls.Add(this.Purchase4);
+            this.Controls.Add(this.Price_Family4);
+            this.Controls.Add(this.Price_Normal4);
+            this.Controls.Add(this.Pizza_Description4);
+            this.Controls.Add(this.Pizza_Name4);
+            this.Controls.Add(this.Number_4);
+            this.Controls.Add(this.Basket_Content_Label3);
+            this.Controls.Add(this.Basket_Content_Label2);
+            this.Controls.Add(this.Basket_Content_Label);
+            this.Controls.Add(this.Basket_Label);
             this.Controls.Add(this.Price_Family1);
             this.Controls.Add(this.Price_Family2);
             this.Controls.Add(this.Price_Family3);
@@ -308,5 +430,15 @@
         private System.Windows.Forms.CheckBox Price_Family3;
         private System.Windows.Forms.CheckBox Price_Family2;
         private System.Windows.Forms.CheckBox Price_Family1;
+        private System.Windows.Forms.Label Basket_Label;
+        private System.Windows.Forms.Label Basket_Content_Label;
+        private System.Windows.Forms.Label Basket_Content_Label2;
+        private System.Windows.Forms.Label Basket_Content_Label3;
+        private System.Windows.Forms.Label Number_4;
+        private System.Windows.Forms.Label Pizza_Name4;
+        private System.Windows.Forms.Label Pizza_Description4;
+        private System.Windows.Forms.CheckBox Price_Normal4;
+        private System.Windows.Forms.CheckBox Price_Family4;
+        private System.Windows.Forms.Button Purchase4;
     }
 }
