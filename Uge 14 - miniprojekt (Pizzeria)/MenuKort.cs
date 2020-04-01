@@ -36,7 +36,7 @@ namespace Uge_14___miniprojekt__Pizzeria_
 
         private void Purchase3_Click(object sender, EventArgs e)
         {
-            Ingredients newWindow = new Ingredients(Number_1);
+            Ingredients newWindow = new Ingredients();
             newWindow.Show(this);
         }
 
