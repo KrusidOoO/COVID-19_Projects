@@ -37,7 +37,7 @@
             this.Price_Normal_Header = new System.Windows.Forms.Label();
             this.Pizza_Description1 = new System.Windows.Forms.Label();
             this.Pizza_Description2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Pizza_Description3 = new System.Windows.Forms.Label();
             this.Price_Family_Header = new System.Windows.Forms.Label();
             this.Purchase1 = new System.Windows.Forms.Button();
             this.Purchase3 = new System.Windows.Forms.Button();
@@ -96,9 +96,8 @@
             this.Number_2.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Number_2.Location = new System.Drawing.Point(172, 199);
             this.Number_2.Name = "Number_2";
-            this.Number_2.Size = new System.Drawing.Size(26, 25);
+            this.Number_2.Size = new System.Drawing.Size(0, 25);
             this.Number_2.TabIndex = 3;
-            this.Number_2.Text = "2.";
             // 
             // Number_1
             // 
@@ -106,9 +105,8 @@
             this.Number_1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Number_1.Location = new System.Drawing.Point(172, 139);
             this.Number_1.Name = "Number_1";
-            this.Number_1.Size = new System.Drawing.Size(26, 25);
+            this.Number_1.Size = new System.Drawing.Size(0, 25);
             this.Number_1.TabIndex = 4;
-            this.Number_1.Text = "1.";
             // 
             // Number_3
             // 
@@ -116,9 +114,8 @@
             this.Number_3.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Number_3.Location = new System.Drawing.Point(172, 278);
             this.Number_3.Name = "Number_3";
-            this.Number_3.Size = new System.Drawing.Size(26, 25);
+            this.Number_3.Size = new System.Drawing.Size(0, 25);
             this.Number_3.TabIndex = 5;
-            this.Number_3.Text = "3.";
             // 
             // Price_Normal_Header
             // 
@@ -150,15 +147,15 @@
             this.Pizza_Description2.TabIndex = 8;
             this.Pizza_Description2.Text = "Med tomat, ost, \r\nskinkekød og ananas";
             // 
-            // label6
+            // Pizza_Description3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(224, 303);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 38);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Med tomat, ost \r\nog permaskinke";
+            this.Pizza_Description3.AutoSize = true;
+            this.Pizza_Description3.Font = new System.Drawing.Font("Malgun Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pizza_Description3.Location = new System.Drawing.Point(224, 303);
+            this.Pizza_Description3.Name = "Pizza_Description3";
+            this.Pizza_Description3.Size = new System.Drawing.Size(119, 38);
+            this.Pizza_Description3.TabIndex = 9;
+            this.Pizza_Description3.Text = "Med tomat, ost \r\nog permaskinke";
             // 
             // Price_Family_Header
             // 
@@ -210,6 +207,7 @@
             this.Price_Normal1.TabIndex = 20;
             this.Price_Normal1.Text = "75 ,-";
             this.Price_Normal1.UseVisualStyleBackColor = true;
+            this.Price_Normal1.CheckedChanged += new System.EventHandler(this.Price_Normal1_CheckedChanged);
             // 
             // Price_Normal3
             // 
@@ -221,6 +219,7 @@
             this.Price_Normal3.TabIndex = 21;
             this.Price_Normal3.Text = "75 ,-";
             this.Price_Normal3.UseVisualStyleBackColor = true;
+            this.Price_Normal3.CheckedChanged += new System.EventHandler(this.Price_Normal3_CheckedChanged);
             // 
             // Price_Normal2
             // 
@@ -232,6 +231,7 @@
             this.Price_Normal2.TabIndex = 22;
             this.Price_Normal2.Text = "75 ,-";
             this.Price_Normal2.UseVisualStyleBackColor = true;
+            this.Price_Normal2.CheckedChanged += new System.EventHandler(this.Price_Normal2_CheckedChanged);
             // 
             // Price_Family3
             // 
@@ -243,6 +243,7 @@
             this.Price_Family3.TabIndex = 23;
             this.Price_Family3.Text = "125 ,-";
             this.Price_Family3.UseVisualStyleBackColor = true;
+            this.Price_Family3.CheckedChanged += new System.EventHandler(this.Price_Family3_CheckedChanged);
             // 
             // Price_Family2
             // 
@@ -254,6 +255,7 @@
             this.Price_Family2.TabIndex = 24;
             this.Price_Family2.Text = "125 ,-";
             this.Price_Family2.UseVisualStyleBackColor = true;
+            this.Price_Family2.CheckedChanged += new System.EventHandler(this.Price_Family2_CheckedChanged);
             // 
             // Price_Family1
             // 
@@ -265,6 +267,7 @@
             this.Price_Family1.TabIndex = 25;
             this.Price_Family1.Text = "125 ,-";
             this.Price_Family1.UseVisualStyleBackColor = true;
+            this.Price_Family1.CheckedChanged += new System.EventHandler(this.Price_Family1_CheckedChanged);
             // 
             // Basket_Label
             // 
@@ -309,9 +312,8 @@
             this.Number_4.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Number_4.Location = new System.Drawing.Point(172, 353);
             this.Number_4.Name = "Number_4";
-            this.Number_4.Size = new System.Drawing.Size(26, 25);
+            this.Number_4.Size = new System.Drawing.Size(0, 25);
             this.Number_4.TabIndex = 30;
-            this.Number_4.Text = "4.";
             // 
             // Pizza_Name4
             // 
@@ -343,6 +345,7 @@
             this.Price_Normal4.TabIndex = 33;
             this.Price_Normal4.Text = "75 ,-";
             this.Price_Normal4.UseVisualStyleBackColor = true;
+            this.Price_Normal4.CheckedChanged += new System.EventHandler(this.Price_Normal4_CheckedChanged);
             // 
             // Price_Family4
             // 
@@ -354,6 +357,7 @@
             this.Price_Family4.TabIndex = 34;
             this.Price_Family4.Text = "125 ,-";
             this.Price_Family4.UseVisualStyleBackColor = true;
+            this.Price_Family4.CheckedChanged += new System.EventHandler(this.Price_Family4_CheckedChanged);
             // 
             // Purchase4
             // 
@@ -390,7 +394,7 @@
             this.Controls.Add(this.Purchase3);
             this.Controls.Add(this.Purchase1);
             this.Controls.Add(this.Price_Family_Header);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.Pizza_Description3);
             this.Controls.Add(this.Pizza_Description2);
             this.Controls.Add(this.Pizza_Description1);
             this.Controls.Add(this.Price_Normal_Header);
@@ -419,7 +423,7 @@
         private System.Windows.Forms.Label Price_Normal_Header;
         private System.Windows.Forms.Label Pizza_Description1;
         private System.Windows.Forms.Label Pizza_Description2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Pizza_Description3;
         private System.Windows.Forms.Label Price_Family_Header;
         private System.Windows.Forms.Button Purchase1;
         private System.Windows.Forms.Button Purchase3;
