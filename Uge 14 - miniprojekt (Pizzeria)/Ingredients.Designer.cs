@@ -81,8 +81,8 @@
             this.Topping_Options_Price19 = new System.Windows.Forms.Label();
             this.Topping_Options_Price20 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.FinalOrder_Plus_Ingredients_textBox = new System.Windows.Forms.TextBox();
             this.Checkout_Header_Label = new System.Windows.Forms.Label();
+            this.Order_Ingredients_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -401,7 +401,7 @@
             // 
             // Done_Selecting_Button
             // 
-            this.Done_Selecting_Button.Location = new System.Drawing.Point(162, 431);
+            this.Done_Selecting_Button.Location = new System.Drawing.Point(156, 431);
             this.Done_Selecting_Button.Name = "Done_Selecting_Button";
             this.Done_Selecting_Button.Size = new System.Drawing.Size(91, 41);
             this.Done_Selecting_Button.TabIndex = 32;
@@ -660,27 +660,14 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.splitContainer1.Panel2.Controls.Add(this.Order_Ingredients_Label);
             this.splitContainer1.Panel2.Controls.Add(this.Checkout_Header_Label);
-            this.splitContainer1.Panel2.Controls.Add(this.FinalOrder_Plus_Ingredients_textBox);
             this.splitContainer1.Panel2.Controls.Add(this.Price_In_Total_Numbers_Label);
             this.splitContainer1.Panel2.Controls.Add(this.Done_Selecting_Button);
             this.splitContainer1.Panel2.Controls.Add(this.Price_In_Total_Label);
             this.splitContainer1.Size = new System.Drawing.Size(1114, 521);
             this.splitContainer1.SplitterDistance = 742;
             this.splitContainer1.TabIndex = 55;
-            // 
-            // FinalOrder_Plus_Ingredients_textBox
-            // 
-            this.FinalOrder_Plus_Ingredients_textBox.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.FinalOrder_Plus_Ingredients_textBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FinalOrder_Plus_Ingredients_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FinalOrder_Plus_Ingredients_textBox.Location = new System.Drawing.Point(126, 69);
-            this.FinalOrder_Plus_Ingredients_textBox.Multiline = true;
-            this.FinalOrder_Plus_Ingredients_textBox.Name = "FinalOrder_Plus_Ingredients_textBox";
-            this.FinalOrder_Plus_Ingredients_textBox.ReadOnly = true;
-            this.FinalOrder_Plus_Ingredients_textBox.Size = new System.Drawing.Size(210, 283);
-            this.FinalOrder_Plus_Ingredients_textBox.TabIndex = 0;
-            this.FinalOrder_Plus_Ingredients_textBox.Text = "Test Test Test Test Test Test Test Test Test Test ";
             // 
             // Checkout_Header_Label
             // 
@@ -691,6 +678,16 @@
             this.Checkout_Header_Label.Size = new System.Drawing.Size(166, 29);
             this.Checkout_Header_Label.TabIndex = 35;
             this.Checkout_Header_Label.Text = "Din bestilling";
+            // 
+            // Order_Ingredients_Label
+            // 
+            this.Order_Ingredients_Label.AutoSize = true;
+            this.Order_Ingredients_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Order_Ingredients_Label.Location = new System.Drawing.Point(122, 79);
+            this.Order_Ingredients_Label.Name = "Order_Ingredients_Label";
+            this.Order_Ingredients_Label.Size = new System.Drawing.Size(51, 20);
+            this.Order_Ingredients_Label.TabIndex = 36;
+            this.Order_Ingredients_Label.Text = "label1";
             // 
             // Ingredients
             // 
@@ -774,7 +771,7 @@
         private System.Windows.Forms.Label Topping_Options_Price19;
         private System.Windows.Forms.Label Topping_Options_Price20;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.TextBox FinalOrder_Plus_Ingredients_textBox;
         private System.Windows.Forms.Label Checkout_Header_Label;
+        private System.Windows.Forms.Label Order_Ingredients_Label;
     }
 }
