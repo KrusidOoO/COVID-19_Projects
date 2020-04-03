@@ -8,26 +8,30 @@ namespace Uge_14___miniprojekt__Pizzeria_
 {
     public class Pizzas
     {
-        public List<string> pizzaID = new List<string>
+        public int ID;
+        public string Name;
+        public string description;
+
+        public string selectedPizzaID;
+        public string selectedPizzaName;
+        public string selectedPizzaDesc;
+        public string size = "";
+        public int RegularPrice = 75;
+        public int FamPrice = 125;
+
+        public static Pizzas[] pizzaCollection =
         {
-            "1.",
-            "2.",
-            "3.",
-            "4."
+            new Pizzas(1,"Margherita","Med tomat og ost"),
+            new Pizzas(2,"Hawaii","Med tomat, ost, skinkekød og ananas"),
+            new Pizzas(3,"Prosciutto","Med tomat, ost og parmaskinke"),
+            new Pizzas(4,"Din egen pizza","Med tomat, ost og op til 5 valgfri ingredienser")
         };
-        public List<string> preMadePizzas = new List<string> 
+        public Pizzas(int ID,string Name,string description)
         {
-            "Margherita",
-            "Hawaii",
-            "Prosciutto",
-            "Din egen pizza" 
-        };
-        public List<string> descriptions = new List<string> 
-        { "Med tomat og ost",
-            "Med tomat, ost, skinkekød og ananas",
-            "Med tomat, ost og permaskinke",
-            "Med tomat, ost og op til 5 valgfri ingredienser" 
-        };
+            this.ID = ID;
+            this.Name = Name;
+            this.description = description;
+        }
         public List<string> Sodas = new List<string>
         {
             "Coca Cola",
@@ -41,6 +45,9 @@ namespace Uge_14___miniprojekt__Pizzeria_
             "0,5 L (lille flaske)",
             "2 L (stor flaske)"
         };
-
+        public void IngredientsSelection(MenuKort menu)
+        {
+            new Ingredients(menu).Show();
+        }
     }
 }

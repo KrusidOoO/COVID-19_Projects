@@ -5,22 +5,30 @@ namespace Uge_14___miniprojekt__Pizzeria_
 {
     public partial class Ingredients : Form
     {
-        TaskMaster TM = new TaskMaster();
-        public Ingredients()
+        public MenuKort menukort;
+        public Pizzas pizza;
+        public Ingredients ingredients;
+        public TaskMaster TM;
+
+        public void ShowSelectedPizza()
+        {
+            Chosen_Pizza_Number_Label.Text =$"{pizza.ID}.";
+            Chosen_Pizza_Name_Label.Text = $"{pizza.Name} {pizza.size}";
+            Chosen_Pizza_Description_Label.Text = $"{pizza.description}";
+        }
+        public Ingredients(MenuKort menu)
         {
             InitializeComponent();
+            this.pizza = menu.pizza;
+            this.menukort = menu;
+            ShowSelectedPizza();
             Order_Ingredients_Label.Text = "";
-            if (Price_In_Total_Numbers_Label.Text == "0")
-            {
-                Price_In_Total_Numbers_Label.Text = "0,00";
-            }
+            Price_In_Total_Numbers_Label.Text = menu.totalprice.ToString()+",00";
         }
 
         private void Ingredients_Load(object sender, EventArgs e)
         {
-            Chosen_Pizza_Number_Label.Text = TM.temporaryString1;
-            Chosen_Pizza_Name_Label.Text = TM.temporaryString2;
-            Chosen_Pizza_Description_Label.Text = TM.temporaryString3;
+
         }
         #region CheckBoxes
         private void Topping_Options1_CheckedChanged(object sender, EventArgs e)

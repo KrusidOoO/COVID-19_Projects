@@ -39,15 +39,6 @@
             this.Pizza_Description2 = new System.Windows.Forms.Label();
             this.Pizza_Description3 = new System.Windows.Forms.Label();
             this.Price_Family_Header = new System.Windows.Forms.Label();
-            this.Purchase1 = new System.Windows.Forms.Button();
-            this.Purchase3 = new System.Windows.Forms.Button();
-            this.Purchase2 = new System.Windows.Forms.Button();
-            this.Price_Normal1 = new System.Windows.Forms.CheckBox();
-            this.Price_Normal3 = new System.Windows.Forms.CheckBox();
-            this.Price_Normal2 = new System.Windows.Forms.CheckBox();
-            this.Price_Family3 = new System.Windows.Forms.CheckBox();
-            this.Price_Family2 = new System.Windows.Forms.CheckBox();
-            this.Price_Family1 = new System.Windows.Forms.CheckBox();
             this.Basket_Label = new System.Windows.Forms.Label();
             this.Basket_Content_Label = new System.Windows.Forms.Label();
             this.Basket_Content_Label2 = new System.Windows.Forms.Label();
@@ -55,9 +46,15 @@
             this.Number_4 = new System.Windows.Forms.Label();
             this.Pizza_Name4 = new System.Windows.Forms.Label();
             this.Pizza_Description4 = new System.Windows.Forms.Label();
-            this.Price_Normal4 = new System.Windows.Forms.CheckBox();
-            this.Price_Family4 = new System.Windows.Forms.CheckBox();
-            this.Purchase4 = new System.Windows.Forms.Button();
+            this.PriceRegular1 = new System.Windows.Forms.RadioButton();
+            this.PriceRegular2 = new System.Windows.Forms.RadioButton();
+            this.PriceRegular3 = new System.Windows.Forms.RadioButton();
+            this.PriceRegular4 = new System.Windows.Forms.RadioButton();
+            this.PriceFam1 = new System.Windows.Forms.RadioButton();
+            this.PriceFam2 = new System.Windows.Forms.RadioButton();
+            this.PriceFam3 = new System.Windows.Forms.RadioButton();
+            this.PriceFam4 = new System.Windows.Forms.RadioButton();
+            this.Select_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Pizza_Name1
@@ -96,8 +93,9 @@
             this.Number_2.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Number_2.Location = new System.Drawing.Point(172, 199);
             this.Number_2.Name = "Number_2";
-            this.Number_2.Size = new System.Drawing.Size(0, 25);
+            this.Number_2.Size = new System.Drawing.Size(26, 25);
             this.Number_2.TabIndex = 3;
+            this.Number_2.Text = "2.";
             // 
             // Number_1
             // 
@@ -105,8 +103,9 @@
             this.Number_1.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Number_1.Location = new System.Drawing.Point(172, 139);
             this.Number_1.Name = "Number_1";
-            this.Number_1.Size = new System.Drawing.Size(0, 25);
+            this.Number_1.Size = new System.Drawing.Size(26, 25);
             this.Number_1.TabIndex = 4;
+            this.Number_1.Text = "1.";
             // 
             // Number_3
             // 
@@ -114,8 +113,9 @@
             this.Number_3.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Number_3.Location = new System.Drawing.Point(172, 278);
             this.Number_3.Name = "Number_3";
-            this.Number_3.Size = new System.Drawing.Size(0, 25);
+            this.Number_3.Size = new System.Drawing.Size(26, 25);
             this.Number_3.TabIndex = 5;
+            this.Number_3.Text = "3.";
             // 
             // Price_Normal_Header
             // 
@@ -167,108 +167,6 @@
             this.Price_Family_Header.TabIndex = 10;
             this.Price_Family_Header.Text = "Fam.";
             // 
-            // Purchase1
-            // 
-            this.Purchase1.Location = new System.Drawing.Point(556, 139);
-            this.Purchase1.Name = "Purchase1";
-            this.Purchase1.Size = new System.Drawing.Size(69, 25);
-            this.Purchase1.TabIndex = 17;
-            this.Purchase1.Text = "Køb";
-            this.Purchase1.UseVisualStyleBackColor = true;
-            this.Purchase1.Click += new System.EventHandler(this.Purchase1_Click);
-            // 
-            // Purchase3
-            // 
-            this.Purchase3.Location = new System.Drawing.Point(556, 275);
-            this.Purchase3.Name = "Purchase3";
-            this.Purchase3.Size = new System.Drawing.Size(69, 25);
-            this.Purchase3.TabIndex = 18;
-            this.Purchase3.Text = "Køb";
-            this.Purchase3.UseVisualStyleBackColor = true;
-            this.Purchase3.Click += new System.EventHandler(this.Purchase3_Click);
-            // 
-            // Purchase2
-            // 
-            this.Purchase2.Location = new System.Drawing.Point(556, 199);
-            this.Purchase2.Name = "Purchase2";
-            this.Purchase2.Size = new System.Drawing.Size(69, 25);
-            this.Purchase2.TabIndex = 19;
-            this.Purchase2.Text = "Køb";
-            this.Purchase2.UseVisualStyleBackColor = true;
-            this.Purchase2.Click += new System.EventHandler(this.Purchase2_Click);
-            // 
-            // Price_Normal1
-            // 
-            this.Price_Normal1.AutoSize = true;
-            this.Price_Normal1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Price_Normal1.Location = new System.Drawing.Point(380, 139);
-            this.Price_Normal1.Name = "Price_Normal1";
-            this.Price_Normal1.Size = new System.Drawing.Size(56, 21);
-            this.Price_Normal1.TabIndex = 20;
-            this.Price_Normal1.Text = "75 ,-";
-            this.Price_Normal1.UseVisualStyleBackColor = true;
-            this.Price_Normal1.CheckedChanged += new System.EventHandler(this.Price_Normal1_CheckedChanged);
-            // 
-            // Price_Normal3
-            // 
-            this.Price_Normal3.AutoSize = true;
-            this.Price_Normal3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Price_Normal3.Location = new System.Drawing.Point(380, 278);
-            this.Price_Normal3.Name = "Price_Normal3";
-            this.Price_Normal3.Size = new System.Drawing.Size(56, 21);
-            this.Price_Normal3.TabIndex = 21;
-            this.Price_Normal3.Text = "75 ,-";
-            this.Price_Normal3.UseVisualStyleBackColor = true;
-            this.Price_Normal3.CheckedChanged += new System.EventHandler(this.Price_Normal3_CheckedChanged);
-            // 
-            // Price_Normal2
-            // 
-            this.Price_Normal2.AutoSize = true;
-            this.Price_Normal2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Price_Normal2.Location = new System.Drawing.Point(380, 199);
-            this.Price_Normal2.Name = "Price_Normal2";
-            this.Price_Normal2.Size = new System.Drawing.Size(56, 21);
-            this.Price_Normal2.TabIndex = 22;
-            this.Price_Normal2.Text = "75 ,-";
-            this.Price_Normal2.UseVisualStyleBackColor = true;
-            this.Price_Normal2.CheckedChanged += new System.EventHandler(this.Price_Normal2_CheckedChanged);
-            // 
-            // Price_Family3
-            // 
-            this.Price_Family3.AutoSize = true;
-            this.Price_Family3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Price_Family3.Location = new System.Drawing.Point(462, 278);
-            this.Price_Family3.Name = "Price_Family3";
-            this.Price_Family3.Size = new System.Drawing.Size(64, 21);
-            this.Price_Family3.TabIndex = 23;
-            this.Price_Family3.Text = "125 ,-";
-            this.Price_Family3.UseVisualStyleBackColor = true;
-            this.Price_Family3.CheckedChanged += new System.EventHandler(this.Price_Family3_CheckedChanged);
-            // 
-            // Price_Family2
-            // 
-            this.Price_Family2.AutoSize = true;
-            this.Price_Family2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Price_Family2.Location = new System.Drawing.Point(462, 199);
-            this.Price_Family2.Name = "Price_Family2";
-            this.Price_Family2.Size = new System.Drawing.Size(64, 21);
-            this.Price_Family2.TabIndex = 24;
-            this.Price_Family2.Text = "125 ,-";
-            this.Price_Family2.UseVisualStyleBackColor = true;
-            this.Price_Family2.CheckedChanged += new System.EventHandler(this.Price_Family2_CheckedChanged);
-            // 
-            // Price_Family1
-            // 
-            this.Price_Family1.AutoSize = true;
-            this.Price_Family1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Price_Family1.Location = new System.Drawing.Point(462, 139);
-            this.Price_Family1.Name = "Price_Family1";
-            this.Price_Family1.Size = new System.Drawing.Size(64, 21);
-            this.Price_Family1.TabIndex = 25;
-            this.Price_Family1.Text = "125 ,-";
-            this.Price_Family1.UseVisualStyleBackColor = true;
-            this.Price_Family1.CheckedChanged += new System.EventHandler(this.Price_Family1_CheckedChanged);
-            // 
             // Basket_Label
             // 
             this.Basket_Label.AutoSize = true;
@@ -312,8 +210,9 @@
             this.Number_4.Font = new System.Drawing.Font("Malgun Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Number_4.Location = new System.Drawing.Point(172, 353);
             this.Number_4.Name = "Number_4";
-            this.Number_4.Size = new System.Drawing.Size(0, 25);
+            this.Number_4.Size = new System.Drawing.Size(26, 25);
             this.Number_4.TabIndex = 30;
+            this.Number_4.Text = "4.";
             // 
             // Pizza_Name4
             // 
@@ -335,48 +234,126 @@
             this.Pizza_Description4.TabIndex = 32;
             this.Pizza_Description4.Text = "Med tomat, ost \r\nog op til \r\n5 valgfri ingredienser";
             // 
-            // Price_Normal4
+            // PriceRegular1
             // 
-            this.Price_Normal4.AutoSize = true;
-            this.Price_Normal4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Price_Normal4.Location = new System.Drawing.Point(380, 359);
-            this.Price_Normal4.Name = "Price_Normal4";
-            this.Price_Normal4.Size = new System.Drawing.Size(56, 21);
-            this.Price_Normal4.TabIndex = 33;
-            this.Price_Normal4.Text = "75 ,-";
-            this.Price_Normal4.UseVisualStyleBackColor = true;
-            this.Price_Normal4.CheckedChanged += new System.EventHandler(this.Price_Normal4_CheckedChanged);
+            this.PriceRegular1.AutoSize = true;
+            this.PriceRegular1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceRegular1.Location = new System.Drawing.Point(380, 144);
+            this.PriceRegular1.Name = "PriceRegular1";
+            this.PriceRegular1.Size = new System.Drawing.Size(55, 21);
+            this.PriceRegular1.TabIndex = 36;
+            this.PriceRegular1.TabStop = true;
+            this.PriceRegular1.Text = "75 ,-";
+            this.PriceRegular1.UseVisualStyleBackColor = true;
             // 
-            // Price_Family4
+            // PriceRegular2
             // 
-            this.Price_Family4.AutoSize = true;
-            this.Price_Family4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Price_Family4.Location = new System.Drawing.Point(462, 357);
-            this.Price_Family4.Name = "Price_Family4";
-            this.Price_Family4.Size = new System.Drawing.Size(64, 21);
-            this.Price_Family4.TabIndex = 34;
-            this.Price_Family4.Text = "125 ,-";
-            this.Price_Family4.UseVisualStyleBackColor = true;
-            this.Price_Family4.CheckedChanged += new System.EventHandler(this.Price_Family4_CheckedChanged);
+            this.PriceRegular2.AutoSize = true;
+            this.PriceRegular2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceRegular2.Location = new System.Drawing.Point(380, 204);
+            this.PriceRegular2.Name = "PriceRegular2";
+            this.PriceRegular2.Size = new System.Drawing.Size(55, 21);
+            this.PriceRegular2.TabIndex = 37;
+            this.PriceRegular2.TabStop = true;
+            this.PriceRegular2.Text = "75 ,-";
+            this.PriceRegular2.UseVisualStyleBackColor = true;
             // 
-            // Purchase4
+            // PriceRegular3
             // 
-            this.Purchase4.Location = new System.Drawing.Point(556, 355);
-            this.Purchase4.Name = "Purchase4";
-            this.Purchase4.Size = new System.Drawing.Size(69, 25);
-            this.Purchase4.TabIndex = 35;
-            this.Purchase4.Text = "Køb";
-            this.Purchase4.UseVisualStyleBackColor = true;
-            this.Purchase4.Click += new System.EventHandler(this.Purchase4_Click);
+            this.PriceRegular3.AutoSize = true;
+            this.PriceRegular3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceRegular3.Location = new System.Drawing.Point(380, 283);
+            this.PriceRegular3.Name = "PriceRegular3";
+            this.PriceRegular3.Size = new System.Drawing.Size(55, 21);
+            this.PriceRegular3.TabIndex = 38;
+            this.PriceRegular3.TabStop = true;
+            this.PriceRegular3.Text = "75 ,-";
+            this.PriceRegular3.UseVisualStyleBackColor = true;
+            // 
+            // PriceRegular4
+            // 
+            this.PriceRegular4.AutoSize = true;
+            this.PriceRegular4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceRegular4.Location = new System.Drawing.Point(380, 358);
+            this.PriceRegular4.Name = "PriceRegular4";
+            this.PriceRegular4.Size = new System.Drawing.Size(55, 21);
+            this.PriceRegular4.TabIndex = 39;
+            this.PriceRegular4.TabStop = true;
+            this.PriceRegular4.Text = "75 ,-";
+            this.PriceRegular4.UseVisualStyleBackColor = true;
+            // 
+            // PriceFam1
+            // 
+            this.PriceFam1.AutoSize = true;
+            this.PriceFam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceFam1.Location = new System.Drawing.Point(462, 144);
+            this.PriceFam1.Name = "PriceFam1";
+            this.PriceFam1.Size = new System.Drawing.Size(63, 21);
+            this.PriceFam1.TabIndex = 40;
+            this.PriceFam1.TabStop = true;
+            this.PriceFam1.Text = "125 ,-";
+            this.PriceFam1.UseVisualStyleBackColor = true;
+            // 
+            // PriceFam2
+            // 
+            this.PriceFam2.AutoSize = true;
+            this.PriceFam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceFam2.Location = new System.Drawing.Point(462, 204);
+            this.PriceFam2.Name = "PriceFam2";
+            this.PriceFam2.Size = new System.Drawing.Size(63, 21);
+            this.PriceFam2.TabIndex = 41;
+            this.PriceFam2.TabStop = true;
+            this.PriceFam2.Text = "125 ,-";
+            this.PriceFam2.UseVisualStyleBackColor = true;
+            // 
+            // PriceFam3
+            // 
+            this.PriceFam3.AutoSize = true;
+            this.PriceFam3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceFam3.Location = new System.Drawing.Point(462, 283);
+            this.PriceFam3.Name = "PriceFam3";
+            this.PriceFam3.Size = new System.Drawing.Size(63, 21);
+            this.PriceFam3.TabIndex = 42;
+            this.PriceFam3.TabStop = true;
+            this.PriceFam3.Text = "125 ,-";
+            this.PriceFam3.UseVisualStyleBackColor = true;
+            // 
+            // PriceFam4
+            // 
+            this.PriceFam4.AutoSize = true;
+            this.PriceFam4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriceFam4.Location = new System.Drawing.Point(462, 358);
+            this.PriceFam4.Name = "PriceFam4";
+            this.PriceFam4.Size = new System.Drawing.Size(63, 21);
+            this.PriceFam4.TabIndex = 43;
+            this.PriceFam4.TabStop = true;
+            this.PriceFam4.Text = "125 ,-";
+            this.PriceFam4.UseVisualStyleBackColor = true;
+            // 
+            // Select_Button
+            // 
+            this.Select_Button.Location = new System.Drawing.Point(582, 164);
+            this.Select_Button.Name = "Select_Button";
+            this.Select_Button.Size = new System.Drawing.Size(190, 202);
+            this.Select_Button.TabIndex = 44;
+            this.Select_Button.Text = "Vælg";
+            this.Select_Button.UseVisualStyleBackColor = true;
+            this.Select_Button.Click += new System.EventHandler(this.Select_Button_Click);
             // 
             // MenuKort
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 559);
-            this.Controls.Add(this.Purchase4);
-            this.Controls.Add(this.Price_Family4);
-            this.Controls.Add(this.Price_Normal4);
+            this.Controls.Add(this.Select_Button);
+            this.Controls.Add(this.PriceFam4);
+            this.Controls.Add(this.PriceFam3);
+            this.Controls.Add(this.PriceFam2);
+            this.Controls.Add(this.PriceFam1);
+            this.Controls.Add(this.PriceRegular4);
+            this.Controls.Add(this.PriceRegular3);
+            this.Controls.Add(this.PriceRegular2);
+            this.Controls.Add(this.PriceRegular1);
             this.Controls.Add(this.Pizza_Description4);
             this.Controls.Add(this.Pizza_Name4);
             this.Controls.Add(this.Number_4);
@@ -384,15 +361,6 @@
             this.Controls.Add(this.Basket_Content_Label2);
             this.Controls.Add(this.Basket_Content_Label);
             this.Controls.Add(this.Basket_Label);
-            this.Controls.Add(this.Price_Family1);
-            this.Controls.Add(this.Price_Family2);
-            this.Controls.Add(this.Price_Family3);
-            this.Controls.Add(this.Price_Normal2);
-            this.Controls.Add(this.Price_Normal3);
-            this.Controls.Add(this.Price_Normal1);
-            this.Controls.Add(this.Purchase2);
-            this.Controls.Add(this.Purchase3);
-            this.Controls.Add(this.Purchase1);
             this.Controls.Add(this.Price_Family_Header);
             this.Controls.Add(this.Pizza_Description3);
             this.Controls.Add(this.Pizza_Description2);
@@ -425,15 +393,6 @@
         private System.Windows.Forms.Label Pizza_Description2;
         private System.Windows.Forms.Label Pizza_Description3;
         private System.Windows.Forms.Label Price_Family_Header;
-        private System.Windows.Forms.Button Purchase1;
-        private System.Windows.Forms.Button Purchase3;
-        private System.Windows.Forms.Button Purchase2;
-        private System.Windows.Forms.CheckBox Price_Normal1;
-        private System.Windows.Forms.CheckBox Price_Normal3;
-        private System.Windows.Forms.CheckBox Price_Normal2;
-        private System.Windows.Forms.CheckBox Price_Family3;
-        private System.Windows.Forms.CheckBox Price_Family2;
-        private System.Windows.Forms.CheckBox Price_Family1;
         private System.Windows.Forms.Label Basket_Label;
         private System.Windows.Forms.Label Basket_Content_Label;
         private System.Windows.Forms.Label Basket_Content_Label2;
@@ -441,8 +400,14 @@
         private System.Windows.Forms.Label Number_4;
         private System.Windows.Forms.Label Pizza_Name4;
         private System.Windows.Forms.Label Pizza_Description4;
-        private System.Windows.Forms.CheckBox Price_Normal4;
-        private System.Windows.Forms.CheckBox Price_Family4;
-        private System.Windows.Forms.Button Purchase4;
+        private System.Windows.Forms.RadioButton PriceRegular1;
+        private System.Windows.Forms.RadioButton PriceRegular2;
+        private System.Windows.Forms.RadioButton PriceRegular3;
+        private System.Windows.Forms.RadioButton PriceRegular4;
+        private System.Windows.Forms.RadioButton PriceFam1;
+        private System.Windows.Forms.RadioButton PriceFam2;
+        private System.Windows.Forms.RadioButton PriceFam3;
+        private System.Windows.Forms.RadioButton PriceFam4;
+        private System.Windows.Forms.Button Select_Button;
     }
 }

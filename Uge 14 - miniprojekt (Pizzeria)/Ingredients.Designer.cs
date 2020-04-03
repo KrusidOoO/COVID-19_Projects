@@ -81,8 +81,8 @@
             this.Topping_Options_Price19 = new System.Windows.Forms.Label();
             this.Topping_Options_Price20 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.Checkout_Header_Label = new System.Windows.Forms.Label();
             this.Order_Ingredients_Label = new System.Windows.Forms.Label();
+            this.Checkout_Header_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -122,27 +122,30 @@
             // Chosen_Pizza_Number_Label
             // 
             this.Chosen_Pizza_Number_Label.AutoSize = true;
-            this.Chosen_Pizza_Number_Label.Location = new System.Drawing.Point(46, 45);
+            this.Chosen_Pizza_Number_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chosen_Pizza_Number_Label.Location = new System.Drawing.Point(38, 56);
             this.Chosen_Pizza_Number_Label.Name = "Chosen_Pizza_Number_Label";
-            this.Chosen_Pizza_Number_Label.Size = new System.Drawing.Size(75, 13);
+            this.Chosen_Pizza_Number_Label.Size = new System.Drawing.Size(25, 24);
             this.Chosen_Pizza_Number_Label.TabIndex = 6;
-            this.Chosen_Pizza_Number_Label.Text = "Valgt pizza ID:";
+            this.Chosen_Pizza_Number_Label.Text = "0.";
             // 
             // Chosen_Pizza_Description_Label
             // 
             this.Chosen_Pizza_Description_Label.AutoSize = true;
-            this.Chosen_Pizza_Description_Label.Location = new System.Drawing.Point(124, 69);
+            this.Chosen_Pizza_Description_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chosen_Pizza_Description_Label.Location = new System.Drawing.Point(70, 83);
             this.Chosen_Pizza_Description_Label.Name = "Chosen_Pizza_Description_Label";
-            this.Chosen_Pizza_Description_Label.Size = new System.Drawing.Size(114, 13);
+            this.Chosen_Pizza_Description_Label.Size = new System.Drawing.Size(152, 17);
             this.Chosen_Pizza_Description_Label.TabIndex = 7;
             this.Chosen_Pizza_Description_Label.Text = "Valgt pizza beskrivelse";
             // 
             // Chosen_Pizza_Name_Label
             // 
             this.Chosen_Pizza_Name_Label.AutoSize = true;
-            this.Chosen_Pizza_Name_Label.Location = new System.Drawing.Point(124, 45);
+            this.Chosen_Pizza_Name_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chosen_Pizza_Name_Label.Location = new System.Drawing.Point(69, 56);
             this.Chosen_Pizza_Name_Label.Name = "Chosen_Pizza_Name_Label";
-            this.Chosen_Pizza_Name_Label.Size = new System.Drawing.Size(85, 13);
+            this.Chosen_Pizza_Name_Label.Size = new System.Drawing.Size(125, 20);
             this.Chosen_Pizza_Name_Label.TabIndex = 8;
             this.Chosen_Pizza_Name_Label.Text = "Valgt pizza navn";
             // 
@@ -669,16 +672,6 @@
             this.splitContainer1.SplitterDistance = 742;
             this.splitContainer1.TabIndex = 55;
             // 
-            // Checkout_Header_Label
-            // 
-            this.Checkout_Header_Label.AutoSize = true;
-            this.Checkout_Header_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Checkout_Header_Label.Location = new System.Drawing.Point(121, 25);
-            this.Checkout_Header_Label.Name = "Checkout_Header_Label";
-            this.Checkout_Header_Label.Size = new System.Drawing.Size(166, 29);
-            this.Checkout_Header_Label.TabIndex = 35;
-            this.Checkout_Header_Label.Text = "Din bestilling";
-            // 
             // Order_Ingredients_Label
             // 
             this.Order_Ingredients_Label.AutoSize = true;
@@ -688,6 +681,16 @@
             this.Order_Ingredients_Label.Size = new System.Drawing.Size(51, 20);
             this.Order_Ingredients_Label.TabIndex = 36;
             this.Order_Ingredients_Label.Text = "label1";
+            // 
+            // Checkout_Header_Label
+            // 
+            this.Checkout_Header_Label.AutoSize = true;
+            this.Checkout_Header_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Checkout_Header_Label.Location = new System.Drawing.Point(121, 25);
+            this.Checkout_Header_Label.Name = "Checkout_Header_Label";
+            this.Checkout_Header_Label.Size = new System.Drawing.Size(166, 29);
+            this.Checkout_Header_Label.TabIndex = 35;
+            this.Checkout_Header_Label.Text = "Din bestilling";
             // 
             // Ingredients
             // 
