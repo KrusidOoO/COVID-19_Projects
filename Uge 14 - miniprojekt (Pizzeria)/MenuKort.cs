@@ -13,11 +13,13 @@ namespace Uge_14___miniprojekt__Pizzeria_
     public partial class MenuKort : Form
     {
         public Pizzas pizza;
-        TaskMaster TM = new TaskMaster();
+        public TaskMaster TM;
         public int totalprice;
+        public string Order;
         public MenuKort()
         {
             InitializeComponent();
+            Basket_Content_Label.Text = Order;
         }
 
         private void MenuKort_Load(object sender, EventArgs e)

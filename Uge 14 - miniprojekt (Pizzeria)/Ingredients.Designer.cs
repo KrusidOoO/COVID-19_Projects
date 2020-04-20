@@ -410,6 +410,7 @@
             this.Done_Selecting_Button.TabIndex = 32;
             this.Done_Selecting_Button.Text = "Færdig";
             this.Done_Selecting_Button.UseVisualStyleBackColor = true;
+            this.Done_Selecting_Button.Click += new System.EventHandler(this.Done_Selecting_Button_Click);
             // 
             // Price_In_Total_Label
             // 
