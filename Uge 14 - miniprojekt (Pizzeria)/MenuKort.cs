@@ -15,11 +15,10 @@ namespace Uge_14___miniprojekt__Pizzeria_
         public Pizzas pizza;
         public TaskMaster TM;
         public int totalprice;
-        public string Order;
         public MenuKort()
         {
             InitializeComponent();
-            Basket_Content_Label.Text = Order;
+            Basket_Content_Label.Text = TM.Order;
         }
 
         private void MenuKort_Load(object sender, EventArgs e)

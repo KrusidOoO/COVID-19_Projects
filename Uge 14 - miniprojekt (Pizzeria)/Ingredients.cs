@@ -441,21 +441,22 @@ namespace Uge_14___miniprojekt__Pizzeria_
 
         private void Done_Selecting_Button_Click(object sender, EventArgs e)
         {
-            MK.Order = "1 x Pizzaer ";
+            TM.Order = "1 x Pizzaer ";
             if(Thickness_RButton1.Checked)
             {
-                MK.Order += "- Almindelig - ";
+                TM.Order += "- Almindelig - ";
             }
             else if(Thickness_RButton2.Checked)
             {
-                MK.Order += "- Dobbeltbund - ";
+                TM.Order += "- Dobbeltbund - ";
             }
             else if(Thickness_RButton3.Checked)
             {
-                MK.Order += "- Deep Pan - ";
+                TM.Order += "- Deep Pan - ";
             }
-            MK.Order += Chosen_Pizza_Name_Label.Text;
+            TM.Order += Chosen_Pizza_Name_Label.Text;
             this.Hide();
+            MK.Refresh();
         }
     }
 }
