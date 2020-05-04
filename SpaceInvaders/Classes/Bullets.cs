@@ -13,7 +13,7 @@ namespace SpaceInvaders.Classes
         public void makeBullet(int bulletSpeedLeft,int bulletSpeedWidth, int bulletPos,PictureBox bullet)
         {
             
-            bullet.Size = new Size(50, 50);
+            bullet.Size = new Size(25, 25);
 
             bullet.SizeMode = PictureBoxSizeMode.StretchImage;
 
@@ -21,7 +21,7 @@ namespace SpaceInvaders.Classes
 
             bullet.Left = bulletSpeedLeft+bulletSpeedWidth/2;
 
-            bullet.Top = bulletPos;
+            bullet.Top = bulletPos-20;
 
             bullet.BringToFront();
         }

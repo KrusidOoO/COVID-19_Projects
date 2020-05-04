@@ -14,9 +14,9 @@ namespace SpaceInvaders
 
         public bool isPressed;
 
-        public int speed = 5;
+        public int speed = 10;
 
-        public int playerSpeed = 6;
+        public int playerSpeed = 10;
 
     }
 }

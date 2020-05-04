@@ -13,15 +13,15 @@ namespace SpaceInvaders
 {
     public partial class Form1 : Form
     {
+        Movement movement = new Movement();
+        Bullets bullets = new Bullets();
+        Score score = new Score();
 
         public int totalEnemies = 5;
         public Form1()
         {
             InitializeComponent();
         }
-
-        Movement movement = new Movement();
-        Bullets bullets = new Bullets();
         private void KeyDownPressed(object sender, KeyEventArgs e)
         {
             if(e.KeyCode==Keys.Left)
@@ -86,6 +86,50 @@ namespace SpaceInvaders
                 }
             }
             #endregion
+
+            #region Bullet movemenet
+            foreach (Control y in this.Controls)
+            {
+                if(y is PictureBox &&y.Tag=="Bullet")
+                {
+                    y.Top -= 20;
+                    if(((PictureBox)y).Top<this.Height-740)
+                    {
+                        this.Controls.Remove(y);
+                    }
+                }
+            }
+            #endregion
+            
+            #region Bullet & Collision
+            foreach (Control i in this.Controls)
+            {
+                foreach(Control j in this.Controls)
+                {
+                    if(i is PictureBox&&i.Tag=="Alien")
+                    {
+                        if(j is PictureBox&&j.Tag=="Bullet")
+                        {
+                            if(i.Bounds.IntersectsWith(j.Bounds))
+                            {
+                                score.score+=10;
+                                this.Controls.Remove(i);
+                                this.Controls.Remove(j);
+                            }
+                        }
+                    }
+                }
+            }
+            #endregion
+
+            label1.Text = "Score: " + score.score;
+
+            if(score.score>totalEnemies*10-1)
+            {
+                GameOver();
+                MessageBox.Show("You killed all the aliens");
+                Application.Exit();
+            }
         }
 
         private void MakeBullet()
