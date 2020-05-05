@@ -25,5 +25,18 @@ namespace SpaceInvaders.Classes
 
             bullet.BringToFront();
         }
+
+        public void EnemyMakeBullet(int bulletSpeedLeft,int bulletSpeedWidth, int bulletPos,PictureBox bullet)
+        {
+            bullet.Size = new Size(25, 25);
+            bullet.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            bullet.Tag = ("Enemy Bullet");
+
+            bullet.Left = bulletSpeedLeft + bulletSpeedWidth / 2;
+
+            bullet.Top = bulletPos + 20;
+            bullet.BringToFront();
+        }
     }
 }

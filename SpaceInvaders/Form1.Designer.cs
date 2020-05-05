@@ -66,7 +66,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::SpaceInvaders.Properties.Resources.Alien1;
-            this.pictureBox4.Location = new System.Drawing.Point(376, 12);
+            this.pictureBox4.Location = new System.Drawing.Point(441, 12);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(85, 50);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,7 +77,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::SpaceInvaders.Properties.Resources.Alien1;
-            this.pictureBox3.Location = new System.Drawing.Point(103, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(117, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(85, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -88,7 +88,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::SpaceInvaders.Properties.Resources.Alien1;
-            this.pictureBox2.Location = new System.Drawing.Point(194, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(220, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(85, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,7 +99,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SpaceInvaders.Properties.Resources.Alien1;
-            this.pictureBox1.Location = new System.Drawing.Point(285, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(328, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(85, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,6 +127,7 @@
             this.SpaceShip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.SpaceShip.TabIndex = 0;
             this.SpaceShip.TabStop = false;
+            this.SpaceShip.Tag = "Player";
             // 
             // Form1
             // 

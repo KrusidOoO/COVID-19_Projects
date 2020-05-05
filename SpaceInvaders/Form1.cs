@@ -42,11 +42,11 @@ namespace SpaceInvaders
 
         private void KeyUpPressed(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode==Keys.Left)
+            if(e.KeyCode==Keys.Left||e.KeyCode==Keys.A)
             {
                 movement.goleft = false;
             }
-            else if(e.KeyCode==Keys.Right)
+            else if(e.KeyCode==Keys.Right||e.KeyCode==Keys.D)
             {
                 movement.goright = false;
             }
@@ -99,6 +99,18 @@ namespace SpaceInvaders
                     }
                 }
             }
+
+            foreach (Control x in this.Controls)
+            {
+                if(x is PictureBox &&x.Tag=="Enemy Bullet")
+                {
+                    x.Top += 20;
+                    if(((PictureBox)x).Top>this.Height-10)
+                    {
+                        this.Controls.Remove(x);
+                    }
+                }
+            }
             #endregion
             
             #region Bullet & Collision
@@ -113,6 +125,7 @@ namespace SpaceInvaders
                             if(i.Bounds.IntersectsWith(j.Bounds))
                             {
                                 score.score+=10;
+                                totalEnemies--;
                                 this.Controls.Remove(i);
                                 this.Controls.Remove(j);
                             }
@@ -120,14 +133,34 @@ namespace SpaceInvaders
                     }
                 }
             }
+            foreach(Control k in this.Controls)
+            {
+                foreach(Control l in this.Controls)
+                {
+                    if(k is PictureBox&&k.Tag=="Player")
+                    {
+                        if(l is PictureBox&&l.Tag=="Enemy Bullet")
+                        {
+                            if(k.Bounds.IntersectsWith(l.Bounds))
+                            {
+                                this.Controls.Remove(k);
+                                this.Controls.Remove(l);
+                                GameOver();
+                            }
+                        }
+
+                    }
+                }
+            }
+            EnemyBullet(true);
             #endregion
 
             label1.Text = "Score: " + score.score;
 
-            if(score.score>totalEnemies*10-1)
+            if(totalEnemies<=0)
             {
                 GameOver();
-                MessageBox.Show("You killed all the aliens");
+                MessageBox.Show("You killed all the aliens!\nGreat job soldier");
                 Application.Exit();
             }
         }
@@ -140,9 +173,19 @@ namespace SpaceInvaders
             this.Controls.Add(bullet);
         }
 
+        private void EnemyBullet(bool Alive)
+        {
+            PictureBox EnemyBullet = new PictureBox();
+            EnemyBullet.Image = Properties.Resources.Bullet;
+            bullets.EnemyMakeBullet(Alien1.Left, Alien1.Width, Alien1.Top, EnemyBullet);
+            this.Controls.Add(EnemyBullet);
+        }
+
         private void GameOver()
         {
             Timer.Stop();
+
+            if(totalEnemies>0)
             label1.Text += "  Game Over";
         }
     }
