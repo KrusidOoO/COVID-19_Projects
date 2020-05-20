@@ -10,9 +10,8 @@ namespace SpaceInvaders
         Movement movement = new Movement();
         Bullets bullets = new Bullets();
         Score score = new Score();
-        public List<PictureBox> aliens = new List<PictureBox> { };
 
-        public int totalEnemies = 15;
+        protected int totalEnemies = 15;
         public Form1()
         {
             InitializeComponent();
