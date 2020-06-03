@@ -18,7 +18,7 @@ namespace Uge_14___miniprojekt__Pizzeria_
         public MenuKort()
         {
             InitializeComponent();
-            Basket_Content_Label.Text = TM.Order;
+            //Basket_Content_Label.Text = TM.Order;
         }
 
         private void MenuKort_Load(object sender, EventArgs e)

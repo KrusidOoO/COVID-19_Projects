@@ -13,7 +13,7 @@ namespace Uge_14___miniprojekt__Pizzeria_
         public string temporaryString3;
         public int finalPrice=0;
 
-        public string Order;
+        public string Order="";
 
 
 

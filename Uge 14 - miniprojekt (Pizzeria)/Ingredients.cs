@@ -5,10 +5,10 @@ namespace Uge_14___miniprojekt__Pizzeria_
 {
     public partial class Ingredients : Form
     {
-        public MenuKort MK;
+        public MenuKort MK=new MenuKort();
         public Pizzas pizza;
         public Ingredients ingredients;
-        public TaskMaster TM;
+        public TaskMaster TM=new TaskMaster();
         public void ShowSelectedPizza()
         {
             Chosen_Pizza_Number_Label.Text =$"{pizza.ID}.";
@@ -441,7 +441,7 @@ namespace Uge_14___miniprojekt__Pizzeria_
 
         private void Done_Selecting_Button_Click(object sender, EventArgs e)
         {
-            TM.Order = "1 x Pizzaer ";
+            TM.Order += "1 x Pizzaer ";
             if(Thickness_RButton1.Checked)
             {
                 TM.Order += "- Almindelig - ";
